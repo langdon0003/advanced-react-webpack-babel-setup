@@ -15,4 +15,17 @@ module.exports = {
     hot: true,
   },
   devtool: 'eval-source-map',
+  module: {
+    rules: [
+      {
+        test: /\.\/styles\/(scss|sass|css)$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader',
+          'scss-loader',
+        ],
+      },
+    ],
+  },
 };

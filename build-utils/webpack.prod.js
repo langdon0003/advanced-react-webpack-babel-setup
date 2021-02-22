@@ -12,4 +12,17 @@ module.exports = {
     contentBase: path.resolve(__dirname, '..', './dist'),
   },
   devtool: 'source-map',
+  module: {
+    rules: [
+      {
+        test: /\.\/styles\/(scss|sass|css)$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader',
+          'scss-loader',
+        ],
+      },
+    ],
+  },
 };
